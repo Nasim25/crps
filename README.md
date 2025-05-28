@@ -121,7 +121,6 @@ All tests are located in `tests/Feature` and `tests/Unit`.
 
 * `app/Http/Middleware/RoleMiddleware.php`
 * `app/Http/Middleware/PermissionMiddleware.php`
-* `app/Traits/HasRoles.php` — Handles role/permission logic
 * `tests/Feature` — Feature tests (middleware, login, role-permission)
 * `routes/api.php` — API endpoints
 * `routes/web.php` — Web endpoints
