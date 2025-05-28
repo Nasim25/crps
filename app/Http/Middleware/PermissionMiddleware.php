@@ -13,7 +13,7 @@ class PermissionMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, $permission): Response
     {
         if (!auth()->check() || !auth()->user()->hasPermission($permission)) {
             abort(403, 'Unauthorized. Permission required: ' . $permission);
