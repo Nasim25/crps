@@ -31,14 +31,7 @@ npm run dev
 php artisan migrate
 ```
 
-### 3. Sanctum Installation
-
-```bash
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-php artisan migrate
-```
-
-### 4. Seed Basic Admin (Optional)
+### 3. Seed Basic Admin (Optional)
 
 ```bash
 php artisan db:seed
