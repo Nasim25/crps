@@ -14,7 +14,7 @@ A Laravel 12 based custom role and permission management system without using th
 ### 1. Clone & Setup
 
 ```bash
-git clone https://github.com/your-username/crps.git
+git clone https://github.com/Nasim25/crps.git
 cd crps
 cp .env.example .env
 composer install
