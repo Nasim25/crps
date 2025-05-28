@@ -39,7 +39,7 @@ php artisan migrate
 ### 4. Seed Basic Admin (Optional)
 
 ```bash
-php artisan db:seed --class=AdminSeeder
+php artisan db:seed
 ```
 
 ---
@@ -75,33 +75,27 @@ Authorization: Bearer <API-TOKEN>
 
 ## 🧾 Role & Permission
 
-### Create Role
-
-```bash
-php artisan make:role Admin
-```
-
 ### Assign Role to User
 
 ```php
-$user->assignRole('Admin');
+$user->assignRole('admin');
 ```
 
 ### Assign Permission to Role
 
 ```php
-$role->givePermissionTo('edit-post');
+$role->givePermissionTo('edit_post');
 ```
 
 ### Middleware Usage
 
 ```php
-Route::middleware(['role:Admin'])->group(function () {
-  // Admin-only routes
+Route::middleware(['role:admin'])->group(function () {
+  // admin-only routes
 });
 
-Route::middleware(['permission:edit-post'])->get('/edit', function () {
-  // Routes requiring 'edit-post' permission
+Route::middleware(['permission:edit_post'])->get('/edit', function () {
+  // Routes requiring 'edit_post' permission
 });
 ```
 
